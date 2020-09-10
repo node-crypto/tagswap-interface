@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
-import './App.css';
+
+// Setup a root component wrapped with all the required providers.
 
 function App() {
     return (

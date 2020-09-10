@@ -1,0 +1,20 @@
+{
+    "plugins": [
+        [
+            "module-resolver",
+            {
+                "root": ["./src"],
+                "alias": {
+                    "assets/*": ["assets/*"],
+                    "components/*": ["components/*"],
+                    "constants/*": ["constants/*"],
+                    "contexts/*": ["contexts/*"],
+                    "hooks/*": ["hooks/*"],
+                    "theme/*": ["theme/*"],
+                    "utils/*": ["utils/*"],
+                    "views/*": ["views/*"]
+                }
+            }
+        ]
+    ]
+}

@@ -6,6 +6,7 @@
                 "root": ["./src"],
                 "alias": {
                     "assets/*": ["assets/*"],
+                    "connectors/*": ["connectors/*"],
                     "components/*": ["components/*"],
                     "constants/*": ["constants/*"],
                     "contexts/*": ["contexts/*"],

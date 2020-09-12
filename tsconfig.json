@@ -1,10 +1,11 @@
 {
     "compilerOptions": {
         "target": "es5",
-        "lib": ["dom", "dom.iterable", "esnext"],
         "baseUrl": "./src",
+        "lib": ["dom", "dom.iterable", "esnext"],
         "paths": {
             "assets/*": ["assets/*"],
+            "connectors/*": ["connectors/*"],
             "components/*": ["components/*"],
             "constants/*": ["constants/*"],
             "contexts/*": ["contexts/*"],
@@ -24,7 +25,8 @@
         "resolveJsonModule": true,
         "isolatedModules": true,
         "noEmit": true,
-        "jsx": "react"
+        "jsx": "react",
+        "strictNullChecks": false
     },
     "include": ["src", "index.d.ts"]
 }

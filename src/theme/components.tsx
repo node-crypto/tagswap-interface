@@ -1,4 +1,4 @@
-import React, { HTMLProps, useCallback } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import styled, { keyframes } from 'styled-components';
 import { darken } from 'polished';

@@ -7,6 +7,8 @@ import styled, {
     DefaultTheme,
 } from 'styled-components';
 // import { useIsDarkMode } from '../state/user/hooks';
+import useIsDarkMode from 'hooks/useIsDarkMode';
+
 import { Text, TextProps } from 'rebass';
 import { Colors } from './styled';
 
@@ -59,19 +61,19 @@ export function colors(darkMode: boolean): Colors {
         advancedBG: darkMode ? 'rgba(0,0,0,0.1)' : 'rgba(255,255,255,0.6)',
 
         //primary colors
-        primary1: darkMode ? '#2172E5' : '#ff007a',
-        primary2: darkMode ? '#3680E7' : '#FF8CC3',
-        primary3: darkMode ? '#4D8FEA' : '#FF99C9',
-        primary4: darkMode ? '#376bad70' : '#F6DDE8',
-        primary5: darkMode ? '#153d6f70' : '#FDEAF1',
 
+        primary1: darkMode ? '#2172E5' : '#4db6ac',
+        primary2: darkMode ? '#3680E7' : '#5fbdb4',
+        primary3: darkMode ? '#4D8FEA' : '#71c5bd',
+        primary4: darkMode ? '#376bad70' : '#82ccc5',
+        primary5: darkMode ? '#153d6f70' : '#94d3cd',
         // color text
-        primaryText1: darkMode ? '#6da8ff' : '#ff007a',
+        primaryText1: darkMode ? '#6da8ff' : '#1f4945',
 
         // secondary colors
-        secondary1: darkMode ? '#2172E5' : '#ff007a',
-        secondary2: darkMode ? '#17000b26' : '#F6DDE8',
-        secondary3: darkMode ? '#17000b26' : '#FDEAF1',
+        secondary1: darkMode ? '#2172E5' : '#4db6ac',
+        secondary2: darkMode ? '#17000b26' : '#82ccc5',
+        secondary3: darkMode ? '#17000b26' : '#94d3cd',
 
         // other
         red1: '#FF6871',
@@ -111,8 +113,7 @@ export function theme(darkMode: boolean): DefaultTheme {
 }
 
 export default function ThemeProvider({ children }: { children: React.ReactNode }) {
-    // const darkMode = useIsDarkMode();
-    const darkMode = true;
+    const { darkMode } = useIsDarkMode();
     const themeObject = useMemo(() => theme(darkMode), [darkMode]);
     return <StyledComponentsThemeProvider theme={themeObject}>{children}</StyledComponentsThemeProvider>;
 }
